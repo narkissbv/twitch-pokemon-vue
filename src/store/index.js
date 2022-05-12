@@ -59,9 +59,9 @@ const store = createStore({
       try {
         const pokemonsList = await axios.get(`https://cindy.narxx.com/pokemon.php?username=${context.state.username}&query=list&mode=json`);
         context.commit('reset');
-        pokemonsList.data.forEach( async pokemon => {
+        for (const pokemon of pokemonsList.data) {
           await context.dispatch('addPokemon', pokemon);
-        })
+        }
         return pokemonsList
       } catch (e) {
         console.log('Error fetching data from API', e);
