@@ -57,7 +57,7 @@ const store = createStore({
 
     async fetchPokemons(context) {
       try {
-        const pokemonsList = await axios.get(`https://cindy.narxx.com/pokemon.php?username=${context.state.username}&query=list&mode=json`);
+        const pokemonsList = await axios.get(`https://twitch.narxx.com/pokemon.php?username=${context.state.username}&query=list&mode=json`);
         context.commit('reset');
         for (const pokemon of pokemonsList.data) {
           await context.dispatch('addPokemon', pokemon);
@@ -94,7 +94,7 @@ const store = createStore({
     async releasePokemon(context, pokemon) {
       try {
         const username = context.state.username
-        const resp = await axios.get(`https://cindy.narxx.com/pokemon.php?username=${username}&query=release_name%20${pokemon}`)
+        const resp = await axios.get(`https://twitch.narxx.com/pokemon.php?username=${username}&query=release_name%20${pokemon}`)
         return resp;
       } catch (e) {
         console.log(`Failed to release ${pokemon}`, e);
