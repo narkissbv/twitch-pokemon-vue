@@ -3,7 +3,7 @@
     <div class="img-container">
       <img :src="require('@/assets/pokeball.png')"/>
     </div>
-    <div class="name">Catch pokemon!</div>
+    <div class="name">Catch!</div>
   </div>
 </template>
 
