@@ -41,7 +41,7 @@
 
 <style scoped>
   .header-container {
-    padding-top: 10px;
+    padding-top: 5px;
     position: relative;
   }
   .refresh,
@@ -58,12 +58,12 @@
   }
   .refresh {
     background-image: url('~@/assets/refresh.svg');
-    top: 10px;
+    top: 5px;
     left: 10px;
   }
   .help {
     background-image: url('~@/assets/help.svg');
-    top: 10px;
+    top: 5px;
     right: 10px;
   }
 </style>

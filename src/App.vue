@@ -2,6 +2,7 @@
   <tp-header/>
   <component :is="navigate"></component>
   <tp-loader/>
+  <snack-bar/>
 </template>
 
 <script setup>
@@ -9,6 +10,7 @@
   import TpHeader from '@/components/TpHeader'
   import PokemonsPage from '@/views/PokemonsPage'
   import TpLoader from '@/components/TpLoader'
+  import SnackBar from '@/components/SnackBar'
   import { useStore } from 'vuex'
   import { computed, onMounted } from 'vue'
   import twitch from '@/utils/twitch'
@@ -49,5 +51,6 @@
     font-family: Inter,Roobert,Helvetica Neue,Helvetica,Arial,sans-serif;
     height: 100vh;
     position: relative;
+    overflow: hidden;
   }
 </style>

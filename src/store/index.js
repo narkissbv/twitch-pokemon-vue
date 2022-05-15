@@ -10,6 +10,7 @@ const store = createStore({
      auth: null,
      viewer: null,
      loading: false,
+     snackbar: '',
    }
   },
   mutations: {
@@ -35,6 +36,9 @@ const store = createStore({
     },
     setLoading(state, isLoading) {
       state.loading = isLoading
+    },
+    setSnackbar(state, message) {
+      state.snackbar = message
     },
   },
 
@@ -91,18 +95,30 @@ const store = createStore({
       }
     },
 
-    async releasePokemon(context, pokemon) {
+    releasePokemon(context, pokemon) {
       try {
         const username = context.state.username
-        const resp = await axios.get(`https://twitch.narxx.com/pokemon.php?username=${username}&query=release_name%20${pokemon}`)
-        return resp;
+        return axios.get(`https://twitch.narxx.com/pokemon.php?username=${username}&query=release_name%20${pokemon}`)
       } catch (e) {
         console.log(`Failed to release ${pokemon}`, e);
       }
     },
 
+    catchPokemon({ state }) {
+      const username = state.username
+      try {
+        return axios.get(`https://twitch.narxx.com/pokemon.php?username=${username}&mode=json`)
+      } catch (e) {
+        console.log('Error catching pokemon', e);
+      }
+    },
+
     setLoading({ commit }, isLoading) {
       commit('setLoading', isLoading);
+    },
+
+    setSnackbar({ commit }, message) {
+      commit('setSnackbar', message);
     },
   },
 })

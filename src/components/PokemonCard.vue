@@ -40,19 +40,26 @@
 </script>
 
 <style scoped>
-.pokemon-card {
-  position: relative;
-}
+  .pokemon-card {
+    position: relative;
+  }
 
-.actions {
-  position: absolute;
-  bottom: 15px;
-  right: 0px;
-  cursor: pointer;
-}
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+  }
 
-.name {
-  text-align: center;
-}
+  .actions {
+    position: absolute;
+    bottom: 15px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .name {
+    text-align: center;
+  }
 
 </style>

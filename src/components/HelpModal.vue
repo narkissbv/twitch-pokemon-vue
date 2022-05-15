@@ -46,6 +46,7 @@ import { defineEmits } from 'vue'
     height: 100vh;
     background-color: rgba(0,0,0,0.9);
     z-index: 1;
+    overflow: auto;
   }
 
   .close {
