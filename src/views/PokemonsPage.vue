@@ -1,5 +1,5 @@
 <template>
-  <div class="flex" v-if="pokemons.length">
+  <div class="flex">
     <pokemon-card v-for="(pokemon, index) in pokemons"
                   :key="index"
                   :pokemon="pokemon"
@@ -8,10 +8,6 @@
               :key="index"
               :ball="ball"
     />
-  </div>
-  <div v-else class="no-pokemons">
-    <h2>You currently have no pokemons</h2>
-    <p>Type <span class="command">!pokemon</span> in chat to catch pokemons!</p>
   </div>
 </template>
 
