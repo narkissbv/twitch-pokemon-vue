@@ -4,10 +4,16 @@ A Twitch panel extension implementation using Vue3, Vuex, composition API
 # Build instructions
 Simply clone the repo, and run
 ```
+npm install
+```
+to install all mode modules dependencies.
+Then run
+```
 npm run build
 ```
 to build a production-ready minified HTML, JS, CSS (will be available under `/dist`)
-or run
+
+Or run
 ```
 npm run serve
 ```
