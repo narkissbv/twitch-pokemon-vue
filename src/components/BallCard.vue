@@ -33,6 +33,7 @@
 <style scoped>
   .ball-card {
     cursor: pointer;
+    flex-basis: 33%;
   }
   .img-container {
     display: flex;
@@ -42,5 +43,8 @@
   }
   .img-container img {
     height: 60px;
+  }
+  .name {
+    text-align: center;
   }
 </style>
