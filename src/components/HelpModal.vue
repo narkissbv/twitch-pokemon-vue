@@ -7,7 +7,7 @@
       <p>Try getting 10 pokemons of the same kind!</p>
     </section>
     
-    <section>
+    <section style="display: none">
       <h4>Nightbot chat commands</h4>
       <p><span class="command">!pokemon</span> - try catch a pokemon</p>
       <p><span class="command">!pokemon list</span> - show your pokemons in a list</p>
@@ -18,9 +18,22 @@
     
     <section>
       <h4>Panel extension</h4>
-      <p><img class="icon" :src="require('@/assets/refresh.svg')"/> Refresh button - updates the list of pokemons (in case you caught or released pokemons from chat command)</p>
-      <p><img class="icon" :src="require('@/assets/help.svg')"/> Help button - show this message</p>
-      <p><img class="icon" :src="require('@/assets/delete.svg')"/> Release buttons - will release the corresonding pokemon</p>
+      <p>
+        <img class="icon" :src="require('@/assets/refresh.svg')"/>
+        <span>Refresh button - updates the list of pokemons (in case you caught or released pokemons from chat command)</span>
+      </p>
+      <p>
+        <img class="icon" :src="require('@/assets/help.svg')"/>
+        <span>Help button - show this message</span>
+      </p>
+      <p>
+        <img class="icon" :src="require('@/assets/delete.svg')"/>
+        <span>Release buttons - releases the corresponding pokemon</span>
+      </p>
+      <p>
+        <img class="icon" :src="require('@/assets/pokeball.png')"/>
+        <span>Catch button - try catching a new pokemon</span>
+      </p>
     </section>
   </div>
 </template>
@@ -67,6 +80,13 @@ import { defineEmits } from 'vue'
   }
   section:last-child {
     border: none;
+  }
+  section p {
+    display: flex;
+    align-items: center;
+  }
+  section img {
+    margin-right: 10px;
   }
 
   .command {

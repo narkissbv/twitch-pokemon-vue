@@ -15,7 +15,7 @@
     if (message.length) {
       setTimeout(() => {
         store.dispatch('setSnackbar', '');
-      }, 5000)
+      }, 3000)
     }
   })
 </script>
@@ -35,7 +35,7 @@
     z-index: 2;
     background-color: rgba(0,0,0,0.9);
     color: white;
-    transition: all 0.5s cubic-bezier();
+    transition: all 0.3s ease;
   }
 
   .snack-bar.active {
